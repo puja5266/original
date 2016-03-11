@@ -1,0 +1,14 @@
+Q1: What happens when you initialize a repository? Why do you need to
+ do it?
+
+Ans:to create a new git repository type:
+	git init
+
+Initialized empty Git repository in F:/git/repository/.git/
+
+Q2:How is the staging area different from the working directory and the
+ repository? What value do you think it offers?
+
+Ans: It is different becoz we can choose which file to commit and 
+whether to combine few file and then commit or rather commit one file
+ at a time.
