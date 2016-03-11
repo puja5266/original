@@ -1,0 +1,189 @@
+Q1: How did viewing a diff between two versions of a file help you see 
+the bug that was introduced?
+
+Ans: In old version we manually had to find the bugs which was time 
+consuming and frustrating.
+bt in version control it will be done in much faster way..
+
+Q2:How could having easy access to the entire history of a file make you a
+ more efficient programmer in the long term?
+
+Ans: Easy to find bugs, typo.
+ We can compare to find how much we have improved , 
+restore old version if we are unhappy with the new one.
+
+Q3: What do you think are the pros and cons of manually choosing when
+ to create a commit, like you do in Git, vs having versions automatically 
+saved, like Google Docs does?
+
+Ans: pros: We know the right time to commit,
+	avoid unnecessery saving
+	avoid saving if no changes are made.
+
+         cons:forget to commit.
+
+Q4: Why do you think some version control systems, like Git, allow 
+saving multiple files in one commit, while others, like Google Docs, 
+treat each file separately?
+
+Ans: Git is mainly design for coding and we know that files in coding 
+are interrelated that it is helpfull
+
+Other: file are independent thus does not require mutilple file saving.
+
+
+Q6: How can you use the commands git log and git diff to view the history of files?
+
+Ans: Inside git bash move to the right directory by typing:
+	cd filename
+then to view the files type:
+	git log
+then to quite viewing type:
+	q
+then to find difference in file we do using file id by typing:
+	git diff first_id second_id
+
+Q7: How might using version control make you more confident to make
+ changes that could break something?
+
+Ans: By using git or other version control we can experiment a lot with 
+our code without worry anything as we can easy find bugs and revert 
+back into previous version.
+
+Q8: Now that you have your workspace set up, what do you want to try 
+using Git for?
+
+Ans: I will use to compare my android project which i will be starting
+ soon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Git Errors and Warnings Solution:
+
+Should not be doing an octopus 
+Octopus is a strategy Git uses to combine many different versions of 
+code together. This message can appear if you try to use this strategy 
+in an inappropriate situation.
+
+You are in 'detached HEAD' state 
+HEAD is what Git calls the commit you are currently on. You can
+ “detach” the HEAD by switching to a previous commit, which we’ll 
+see in the next video. Despite what it sounds like, it’s actually not a 
+bad thing to detach the HEAD. Git just warns you so that you’ll realize
+ you’re doing it.
+
+Panic! (the 'impossible' happened) 
+This is a real error message, but it’s not output by Git.
+ Instead it’s output by GHC, the compiler for a programming language
+ called Haskell. It’s reserved for particularly surprising errors!
+
+Takeaway We hope these errors and warnings amused you as much as
+ they amused us! Now that you know what kind of errors Git can throw, 
+you’re ready to start checking out previous versions of files with Caroline.
+
+
+
+
+Q:If someone else gives you the location of their directory or repository,
+ you can copy or clone it to your own computer.
+
+This is true for both copying a directory and cloning a repository.
+
+As you saw in the previous lesson, if you have a URL to a repository,
+ you can copy it to your computer using git clone.
+
+For copying a directory, you weren't expected to know this, but it is
+ possible to copy a directory from one computer to another using the 
+command scp, which stands for "secure copy". The name was chosen because the scp command lets you securely copy a directory from one computer to another. 
+
+
+The history of changes to the directory or repository is copied.
+
+This is true for cloning a repository, but not for copying a directory. 
+
+The main reason to use git clone rather than copying the directory is 
+because git clone will also copy the commit history of the repository. 
+However, copying can be done on any directory, whereas git clone only
+ works on a Git repository. 
+
+
+If you make changes to the copied directory or cloned repository, the 
+original will not change.
+
+This is true for both copying a directory and cloning a repository.
+ In both cases, you're making a copy that you can alter without changing the original. 
+
+
+The state of every file in the directory or repository is copied.
+
+This is true for both copying a directory and cloning a repository. In
+ both cases, all the files are copied.
+
+
+Checking out an earlier commit will change the state of at least one file.
+
+This is sometimes true. Git doesn't allow you to save a new commit if no files have been updated, so you might think this is always true. However, it's possible to do the following:
+
+Save a commit (call this commit 1).
+Update some files and save another commit (call this commit 2).
+Change all the files back to their state during commit 1, then save again (call this commit 3).
+This sometimes happens if commit 2 contained a bug, and it's important to fix the bug quickly. The easiest thing to do might be to remove all the changes introduced by commit 2 to fix the bug, then figure out how to safely reintroduce the changes later.
+
+At this point, commit 3 is the latest commit, so if you checkout commit 1, none of the files will be changed. 
+
+
+Checking out an earlier commit will change the state of more than one
+ file.
+
+Checking out an earlier commit will change the state of every file in the 
+repository.
+
+Both of these are sometimes true. Since each commit tracks the state
+ of all files in the repository, it is possible that checking out an earlier
+ commit will change the state of multiple files, or even all the files in the 
+repository. However, it is possible to save a new commit after changing
+ only one file, so it is possible only one file will change. 
+
+
+After checking out a commit, the state of all the files in the repository 
+will be from the same point in time.
+
+This is always true. A commit saves a snapshot of all files in the
+ repository at the time the commit was made, so checking out an earlier
+ commit will result in all the files being reverted to their state at the time
+ the commit was made. That is, the files will be in a consistent state.	
