@@ -20,3 +20,10 @@ Ans: We use branches when we are creating diffenent commits.
          either local machine or clone it from github.
         We use fork when we want to copy project directly into my gitthub 
        account fom other account anf make minor changes on github.
+
+Q4:What is the benefit of having a copy of the last known state of the 
+remote stored locally?
+
+Ans: benefit of having a copy of the last known state of the 
+remote stored locally is to avoid conflit and to know the state which 
+will help while merging.
